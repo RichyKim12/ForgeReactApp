@@ -84,13 +84,13 @@ export default function Game() {
     //src: https://www.w3schools.com/howto/howto_css_center-list.asp
     <center>
       {/* src: https://www.freecodecamp.org/news/react-background-image-tutorial-how-to-set-backgroundimage-with-inline-css-style/ */}
-      <div  class="gamecontainer" style={{ backgroundImage: `url(${background})` }}>
+      <div  className="gamecontainer" style={{ backgroundImage: `url(${background})` }}>
         <div className="game">
           <div className="game-board">
             <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
           </div>
           <div className="game-info">
-            <ol class = "myUL">{moves}</ol>
+            <ol className = "myUL">{moves}</ol>
           </div>
         </div>
         

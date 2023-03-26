@@ -13,9 +13,13 @@ code {
     monospace;
 }
 
-
+div.status{
+  font-weight: bold;
+  font-size: 30px;
+}
 .square{
   padding: 30px 30px;
+  border: 2px solid #4CAF50
 }
 
 div.gamecontainer {
@@ -26,6 +30,7 @@ div.gamecontainer {
 ol.myUL {
   display: inline-block;
   text-align: left;
+  font-weight: bold;
 }
 
 div.spacefill{
