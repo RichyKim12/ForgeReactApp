@@ -6,7 +6,6 @@ function Square({value, onSquareClick }) {
 }
 
 export function Board({ xIsNext, squares, onPlay }) {
-  
   function handleClick(i) {
     
     if (squares[i] === "X" || squares[i] ==="O" || calculateWinner(squares)){
@@ -32,6 +31,7 @@ export function Board({ xIsNext, squares, onPlay }) {
   }
   return (
     <>
+      
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -54,7 +54,7 @@ export function Board({ xIsNext, squares, onPlay }) {
 
 export default function Game() {
   
-  const [history, setHistory] = useState([Array(9).fill("_")]);
+  const [history, setHistory] = useState([Array(9).fill("...")]);
   const [currentMove, setCurrentMove] = useState(0);
   const currentSquares = history[currentMove];
   const xIsNext = currentMove % 2 === 0;
@@ -81,14 +81,19 @@ export default function Game() {
     );
   });
   return (
-    <div className="game">
-      <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+    //src: https://www.w3schools.com/howto/howto_css_center-list.asp
+    <center>
+      <div class="gamecontainer">
+        <div className="game">
+          <div className="game-board">
+            <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+          </div>
+          <div className="game-info">
+            <ol class = "myUL">{moves}</ol>
+          </div>
+        </div>
       </div>
-      <div className="game-info">
-        <ol>{moves}</ol>
-      </div>
-    </div>
+    </center>
   );
 }
 

@@ -12,7 +12,14 @@ code {
     monospace;
 }
 
-square {
-  width: "10px";
-  height: "10px";
+.square{
+  padding: 30px 30px;
+}
+
+div.container {
+  text-align: center;
+}
+ol.myUL {
+  display: inline-block;
+  text-align: left;
 }
