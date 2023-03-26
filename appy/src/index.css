@@ -7,19 +7,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+
 .square{
   padding: 30px 30px;
 }
 
-div.container {
+div.gamecontainer {
   text-align: center;
+  height: 100vh;
+  
 }
 ol.myUL {
   display: inline-block;
   text-align: left;
+}
+
+div.spacefill{
+  
+    height:400px;
+    width:100%;
+    clear:both;
 }

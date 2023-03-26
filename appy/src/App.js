@@ -1,5 +1,5 @@
 import { useState} from 'react';
-
+import background from "./06.png";
 
 function Square({value, onSquareClick }) {
   return <button className="square" onClick={onSquareClick}>{value}</button>;
@@ -83,7 +83,8 @@ export default function Game() {
   return (
     //src: https://www.w3schools.com/howto/howto_css_center-list.asp
     <center>
-      <div class="gamecontainer">
+      {/* src: https://www.freecodecamp.org/news/react-background-image-tutorial-how-to-set-backgroundimage-with-inline-css-style/ */}
+      <div  class="gamecontainer" style={{ backgroundImage: `url(${background})` }}>
         <div className="game">
           <div className="game-board">
             <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
@@ -92,6 +93,7 @@ export default function Game() {
             <ol class = "myUL">{moves}</ol>
           </div>
         </div>
+        
       </div>
     </center>
   );
