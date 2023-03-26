@@ -26,7 +26,7 @@ export function Board({ xIsNext, squares, onPlay, winner }) {
     onPlay(nextSquares);  
   }
   let status;
-  if (winner) {
+  if (winner && winner.length > 0) {
     status = 'Winner: ' + winner[0];
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
